@@ -1,8 +1,17 @@
 import express from 'express';
+import path from 'path';
 import indexRouter from './routes/indexRouter.js';
 import newRouter from './routes/newRouter.js';
 
+const __dirname = new URL('.', import.meta.url).pathname;
+
 const app = express();
+
+const assetsPath = path.join(__dirname, 'public');
+app.use(express.static(assetsPath));
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 const PORT = process.env.PORT || 3000;
 
