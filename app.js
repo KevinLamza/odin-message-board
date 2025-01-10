@@ -1,5 +1,6 @@
 import express from 'express';
 import indexRouter from './routes/indexRouter.js';
+import newRouter from './routes/newRouter.js';
 
 const app = express();
 
@@ -10,3 +11,4 @@ app.listen(PORT, () => {
 });
 
 app.use('/', indexRouter);
+app.use('/new', newRouter);
