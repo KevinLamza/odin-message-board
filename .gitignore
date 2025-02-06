@@ -25,3 +25,9 @@ dist-ssr
 
 # notes
 notes.md
+
+pool.*
+populatedb.*
+.env
+
+*.pem

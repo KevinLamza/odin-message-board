@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 import indexRouter from './routes/indexRouter.js';
@@ -15,7 +16,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.APP_PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`Server up and running - listening on port ${PORT}`);

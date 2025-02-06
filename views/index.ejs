@@ -8,9 +8,9 @@
         </h1>
         <p><a href="/new">Add a message</a></p>
         <% messages.forEach((message) => { %>
-        <span><%= message.text %></span><br />
-        <span><%= message.user %></span><br />
-        <span><%= message.added %></span><br />
+        <span><%= message.message %></span><br />
+        <span><%= message.username %></span><br />
+        <span><%= message.created_at %></span><br />
         <span>----------</span><br />
         <% }); %>
     </body>
